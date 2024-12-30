@@ -1,0 +1,57 @@
+# COVID-19 Data Analysis and Visualization Project
+
+This project involves cleaning, analyzing, and visualizing COVID-19 time-series data sourced from the CSSEGISandData GitHub repository. The objective is to explore the trends in confirmed COVID-19 cases across different countries/regions over time.
+
+## Project Overview
+
+### Data Source
+
+The dataset is sourced from the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE) repository:
+
+- **Dataset**: [time_series_covid19_confirmed_global.csv](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv)
+
+### Key Steps in the Project
+
+1. Load the data and handle missing values.
+2. Reshape the data for time-series analysis.
+3. Perform exploratory data analysis (EDA) to summarize and understand the data.
+4. Visualize trends in COVID-19 cases using line plots.
+5. Save the cleaned dataset for further use.
+
+## Code Overview
+
+### Libraries Used
+
+The following Python libraries are used in the project:
+
+- **pandas**: For data manipulation and cleaning.
+- **seaborn**: For creating data visualizations.
+- **matplotlib**: For plotting charts.
+- **numpy**: For numerical operations.
+
+### Steps in the Script
+
+1. **Data Loading**:
+   - The dataset is loaded directly from the JHU CSSE GitHub repository using `pandas.read_csv()`.
+
+2. **Data Cleaning**:
+   - Missing values are handled using `dropna()`.
+   - The dataset is reshaped using `pd.melt()` to transform the wide format into a long format for time-series analysis.
+
+3. **Data Analysis**:
+   - Summary statistics (`data.describe()`) and dataset metadata (`data.info()`) are printed for better understanding.
+
+4. **Data Visualization**:
+   - A line plot is created using `seaborn.lineplot()` to visualize the trend of confirmed COVID-19 cases over time for various countries/regions.
+
+5. **Save Cleaned Data**:
+   - The cleaned dataset is saved locally as `covid19_cleaned_data.csv`.
+
+## Usage Instructions
+
+### Setup Environment
+
+Ensure the following libraries are installed in your Python environment:
+
+```sh
+pip install pandas matplotlib seaborn numpy
